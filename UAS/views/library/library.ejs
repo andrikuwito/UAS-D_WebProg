@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/img/logo_transparent.png" />
+    <title>Virtual Labs &mdash; Official Site</title>
+
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="/css/animate.css" type="text/css">
+    <link rel="stylesheet" href="/css/media.css" type="text/css">
+    <script src="/js/script2.js"></script>
+</head>
+
+<body>
+
+    <% if (isLoggedIn) { %>
+    <%- include('../partials/navbar', {isLoggedIn : isLoggedIn, username: username}); %>
+    <% } else { %> <%- include('../partials/navbar', {isLoggedIn : isLoggedIn}); %> <% } %>
+
+    <main>
+        <div class="container">
+            <a href='/'>Home</a>
+            <input type="button" id="test" value="Sort By : A-Z" />
+            <div class="row">
+                <div class="col-12">
+
+
+                    <ul class="lele" id="list">
+                        <% library.forEach (produk => { %>
+                        <a href="/produk/<%= produk._id%>">
+                            <li>
+                                <div class="new-game">
+                                    <img src="/img<%=produk.img[0]%>">
+                                    <div class="game-desc">
+                                        <h4><%=produk.title%></h4>
+                                        <p class="publisher"><%=produk.publisher%></p>
+                                        <p class="price"><%=produk.price%></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </a>
+                        <% }) %>
+                    </ul>
+
+                   
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <footer class="card-footer text-center">
+        <ul class="icon">
+            <li><a href="https://www.facebook.com/">
+                    <ion-icon id="facebook" name="logo-facebook"></ion-icon>
+                </a></li>
+            <li><a href="https://twitter.com/">
+                    <ion-icon id="twitter" name="logo-twitter"></ion-icon>
+                </a></li>
+            <li><a href="https://id.pinterest.com/">
+                    <ion-icon id="pinterest" name="logo-pinterest"></ion-icon>
+                </a></li>
+            <li><a href="https://www.youtube.com/">
+                    <ion-icon id="youtube" name="logo-youtube"></ion-icon>
+                </a></li>
+            <li><a href="https://www.instagram.com/">
+                    <ion-icon id="instagram" name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+
+        <ul>
+            <li><a href="contact.html">Customer Care</a><span> &#124;</span></li>
+            <li><a href="contact.html">Contact Us</a><span> &#124;</span></li>
+            <li><a href="terms.html">Terms of Services</a><span> &#124;</span></li>
+            <li><a href="policy.html">Privacy Policy</a><span> &#124;</span></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+
+        <p class="copyright">&#169; 2020 Virtual Labs, All Rights Reserved.</p>
+        <p class="footer-desc">Use of and/or registration on any portion of this site constitutes acceptance of our
+            User
+            Agreement (updated 1/1/20) and Privacy Policy and Cookie Statement (updated 1/1/20). Your California
+            Privacy
+            Rights. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise
+            used,
+            except with the prior written permission of Condé Nast. Ad Choices.</p>
+    </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

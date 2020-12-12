@@ -1,0 +1,77 @@
+<header>
+    <nav class="user-select-none navbar navbar-expand-md navbar-dark navbar-override">
+        <div class="container-fluid">
+            <a class="navbar-brand" href='/'>
+                <img src="/img/logo_transparent.png" height="30" width="30" class="d-inline-block align-top"
+                    style="margin-right: 10px; ">VIRTUAL LABS
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle dropbtn" data-toggle="dropdown" href='/' role="button"
+                            aria-haspopup="true" aria-expanded="false">STORE</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href='/'>Home</a>
+                            <a class="dropdown-item" href='/browse'>Browse</a>
+                        </div>
+                    </li>
+                    
+                    <!-- <li class="nav-item"><a class="nav-link" href='/newsindex'>NEWS</a></li> -->
+
+                    <li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">ABOUT US</a></li>
+                </ul>
+
+                <ul class="navbar-nav nav-2">
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false" style="background-color: transparent; border: 0;">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </button>
+                        <div class="dropdown-menu">
+                            <form class="search" action='/search' method="GET">
+                                <input type="text" class="dropdown-item" name="search" placeholder="Search">
+                                <button type="submit" class="searchBtn">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </button>
+                            </form>
+                        </div>
+                    </li>
+
+
+                    <% if (isLoggedIn) { %>
+
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle dropbtn" data-toggle="dropdown" href='/' role="button"
+                            aria-haspopup="true" aria-expanded="false"
+                            style="text-transform:uppercase"><%=username%></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href='/library/<%= username %>'>Library</a>
+                            <a class="dropdown-item" href='/logout'>Logout</a>
+                        </div>
+                    </li>
+
+
+                    <% } else {%>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false" style="background-color: transparent; border: 0;">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href='/signin'>SIGN IN</a>
+                            <a class="dropdown-item" href='/regis'>REGISTER</a>
+                        </div>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

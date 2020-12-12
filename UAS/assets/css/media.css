@@ -1,0 +1,86 @@
+@media only screen and (max-width:991px) {
+    #main-banner .col-img img {
+        border-radius: 0;
+    }
+
+    #main-banner .col-wrt {
+        border-radius: 0;
+    }
+    
+    #main-banner .carousel-control-prev, .carousel-control-next {
+        height: 30px;
+        position: absolute;
+        top: 92%;
+    }
+    
+    #main-banner .col-wrt .morebtn {
+        bottom: 10%;
+    }
+    
+    #main-banner .carousel-control-prev {
+        left: 50.5%;
+    }
+
+    #main-banner .carousel-control-next {
+        right: 20%;
+    }
+    
+    #main-banner .carousel-indicators {
+        top: 92%;
+    }
+    
+    .special-offer .col-lg {
+        margin: 10px;
+    }
+    
+    .special-offer .col-2-item .game-desc {
+        margin-bottom: 20px;
+    }
+
+    .special-offer img {
+        height: 300px;
+    }
+    
+    .special-offer .col-2-item img{
+        height: 300px;
+    }
+    
+    .free-games .col-lg:first-of-type {
+        padding-right: 80px;
+        text-align: center;
+    }
+    
+    .free-games p {
+        text-align: center;
+        margin: 30px 0 50px 0;
+    }
+    
+    .free-games img {
+        margin-top: 0;
+    }
+    
+    .new-release .new-game {
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .more-from {
+        margin: 0;
+    }
+
+    .more-from .more-game {
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width:516px) {
+    .genre-section .row {
+        margin: 0 25%;
+    }
+    
+    .genre-section a {
+        margin: 2px;
+    }
+
+}

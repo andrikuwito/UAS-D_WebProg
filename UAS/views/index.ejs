@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/img/logo_transparent.png" />
+    <title>Virtual Labs &mdash; Official Site</title>
+
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/animate.css" type="text/css">
+    <link rel="stylesheet" href="/css/media.css" type="text/css">
+</head>
+
+<body>
+    <% if (isLoggedIn) { %>
+    <%- include('./partials/navbar', {isLoggedIn : isLoggedIn, username: username}); %>
+    <% } else { %> <%- include('./partials/navbar', {isLoggedIn : isLoggedIn}); %> <% } %>
+
+
+    <main>
+        <div class="container-fluid">
+            <div class="container">
+                <div id="main-banner" class="carousel slide carousel-fade js--carousel" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#main-banner" data-slide-to="0" class="active"></li>
+                        <li data-target="#main-banner" data-slide-to="1"></li>
+                        <li data-target="#main-banner" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <% var isFirst = true%>
+                        <% produks.forEach (produks => { %>
+                            <% if(produks.role=='true'){ %>
+                                <%if (isFirst == true){%>
+                                    <%isFirst = false%>
+                                        <div class="carousel-item active">
+                                            <%}else{%>
+                                                <div class="carousel-item">
+                                                    <%}%>
+                                    <div class="row">
+                                <div class="col-lg-8 col-img">
+                                    <a href="/produk/<%= produks._id%>"><img src="/img<%=produks.img[5]%>" class="d-block w-100"
+                                            ></a>
+                                </div>
+
+                                <div class="col-lg-4 col-wrt">
+                                    <a href="/produk/<%= produks._id%>">
+                                        <p class="disc-desc">AVALAIBLE NOW</p>
+                                        <h2><%=produks.title%></h2>
+                                        <p>An online and local party game of teamwork and betrayal for 4-10 players...in
+                                            space!</p>
+                                    </a>
+                                    <a class="morebtn" href="/produk/<%= produks._id%>">Play Now <ion-icon
+                                            name="arrow-redo-circle-outline"></ion-icon></a>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                        <% }) %>
+                    </div>
+                    <a class="carousel-control-prev" href="#main-banner" role="button" data-slide="prev">
+                        <span aria-hidden="true">
+                            <ion-icon name="caret-back-outline"></ion-icon>
+                        </span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#main-banner" role="button" data-slide="next">
+                        <span aria-hidden="true">
+                            <ion-icon name="caret-forward-outline"></ion-icon>
+                        </span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2 class="section-title">SPECIAL OFFERS</h2>
+                <div class="row special-offer js--special-offer">
+                    <% produks.forEach (produks => { %>
+                        <% if(produks.role=='spesial'){ %>
+                    <div class="col-lg">
+                        <div class="row row-img">
+                            <a href="/produk/<%= produks._id%>"><img src="/img<%=produks.img[0]%>"></a>
+                        </div>
+                        <div class="row game-desc">
+                            <a href="/produk/<%= produks._id%>">
+                                <h5><%=produks.title%></h5>
+                            </a>
+                        </div>
+                    </div>
+                    <% } %>
+                    <% }) %>
+
+                </div>
+            </div>
+
+            <div class="container ">
+                <h2 class="section-title title2">Trending</h2>
+                <div class="row free-games js--free-game">
+                    <div class="col-lg">
+                        <h3>VALORANT</h3>
+                        <p>VALORANT is your global competitive stage. It’s a 5v5 tac-shooter matchup to plant or defuse
+                            the Spike. More than guns and bullets, creativity is your greatest weapon.</p>
+
+                        <a href="/produk/5fd4eac21b7b5620447858b6" role="button">PLAY FREE NOW</a>
+                    </div>
+                    <div class="col-lg text-center">
+                        <img src="/img/valorant.png" alt="Valorant">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2 class="section-title">NEW RELEASE</h2>
+                <div class="row new-release js--new-release">
+                    <% produks.forEach (produks => { %>
+                        <% if(produks.role=='new'){ %>
+                    <div class="col-lg new-game">
+                        <a href="/produk/<%= produks._id%>">
+                            <div class="row row-img">
+                                <img src="/img<%=produks.img[0]%>">
+                            </div>
+                            <div class="row game-desc">
+                                <h6><%=produks.title%></h6>
+                                <p class="publisher"><%=produks.publisher%></p>
+                            </div>
+                        </a>
+                    </div>
+                    <% } %>
+                    <% }) %>
+                </div>
+            </div>
+
+            
+
+            <div class="container">
+                <h2 class="section-title">MORE FROM VIRTUAL LABS <a href='/browse' role="button">View All</a></h2>
+                <div class="row js--more-from">
+                    <div class="row more-from">
+                        <% produks.forEach (produks => { %>
+                            <% if(produks.role==''){ %>
+                        <div class="col-md more-game">
+                            <a href="/produk/<%= produks._id%>">
+                                <div class="row row-img">
+                                    <img src="/img<%=produks.img[0]%>">
+                                </div>
+                                <div class="row game-desc">
+                                    <h6><%=produks.title%></h6>
+                                    <p class="publisher"><%=produks.publusher%></p>
+                                </div>
+                            </a>
+                        </div>
+                        <% } %>
+                        <% }) %>
+                    </div>
+                    <div class="row more-from">
+                        <div class="col-md more-game">
+                            <a href="disgaea.html">
+                                <div class="row row-img">
+                                    <img src="/img/apex.jpg">
+                                </div>
+                                <div class="row game-desc">
+                                    <h6>Apex Legends#8482</h6>
+                                    <p class="publisher">Electronic Arts</p>
+                                    <p class="price">FREE</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md more-game">
+                            <a href="disgaea.html">
+                                <div class="row row-img">
+                                    <img src="/img/nfsheat.jpg">
+                                </div>
+                                <div class="row game-desc">
+                                    <h6>Need For Speed&#8482 Heat</h6>
+                                    <p class="publisher">Electronic Arts</p>
+                                    <p class="price">$59.99</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md more-game">
+                            <a href="disgaea.html">
+                                <div class="row row-img">
+                                    <img src="/img/fifa.jpg">
+                                </div>
+                                <div class="row game-desc">
+                                    <h6>FIFA 21</h6>
+                                    <p class="publisher">Electronic Arts</p>
+                                    <p class="price">$79.90</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="card-footer text-center">
+        <ul class="icon">
+            <li><a href="https://www.facebook.com/" target="_blank">
+                    <ion-icon id="facebook" name="logo-facebook"></ion-icon>
+                </a></li>
+            <li><a href="https://twitter.com/" target="_blank">
+                    <ion-icon id="twitter" name="logo-twitter"></ion-icon>
+                </a></li>
+            <li><a href="https://id.pinterest.com/" target="_blank">
+                    <ion-icon id="pinterest" name="logo-pinterest"></ion-icon>
+                </a></li>
+            <li><a href="https://www.youtube.com/" target="_blank">
+                    <ion-icon id="youtube" name="logo-youtube"></ion-icon>
+                </a></li>
+            <li><a href="https://www.instagram.com/" target="_blank">
+                    <ion-icon id="instagram" name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+
+        <ul>
+            <li><a href="contact.html">Customer Care</a><span> &#124;</span></li>
+            <li><a href="contact.html">Contact Us</a><span> &#124;</span></li>
+            <li><a href="terms.html">Terms of Services</a><span> &#124;</span></li>
+            <li><a href="policy.html">Privacy Policy</a><span> &#124;</span></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+
+        <p class="copyright">&#169; 2020 Virtual Labs, All Rights Reserved.</p>
+        <p class="footer-desc">Use of and/or registration on any portion of this site constitutes acceptance of our User
+            Agreement (updated 1/1/20) and Privacy Policy and Cookie Statement (updated 1/1/20). Your California Privacy
+            Rights. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used,
+            except with the prior written permission of Condé Nast. Ad Choices.</p>
+    </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="/js/jquery.waypoints.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

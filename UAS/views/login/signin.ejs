@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/img/logo_transparent.png">
+    <title>Virtual Labs &mdash; Sign in</title>
+
+    <!-- <style>
+            .login-card,
+            .signup-card {
+                width: 40%;
+                margin: 50px auto;
+                padding: 40px;
+                background-color: #2d3540;
+                border-radius: 20px;
+                color: white;
+                font-weight: 600;
+                text-align: center;
+            }
+    
+            .login-card img,
+            .signup-card img {
+                margin-bottom: 30px;
+            }
+    
+            .login-card p,
+            .login-card .form-check,
+            .signup-card .form-check {
+                text-align: left;
+            }
+    
+            .signup-card .form-row {
+                margin-bottom: 20px;
+            }
+    
+            .signup-card .form-check {
+                color: #b5b5b5;
+            }
+    
+            .login-card .btn,
+            .signup-card .btn {
+                background-color: whitesmoke;
+                color: #909090;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+    
+            .login-card .btn:active,
+            .signup-card .btn:active {
+                background-color: #c6c6c6;
+                color: #818181;
+            }
+        </style> -->
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/animate.css" type="text/css">
+    <link rel="stylesheet" href="/css/media.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-card">
+            <img src="/img/logo_transparent.png" width="50px">
+            <p>Sign in to Virtual Labs</p>
+
+            <% if (messages.error){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= messages.error %>
+            </div>
+
+            <% } %>
+            <% if (messages.info){ %>
+            <div class="alert alert-info" role="alert">
+                <%= messages.info %>
+            </div>
+
+            <% } %>
+            <% if (messages.success){ %>
+            <div class="alert alert-success" role="alert">
+                <%= messages.success %>
+            </div>
+
+            <% } %>
+
+            <form action="/logintest" method="POST" autocomplete="off">
+                <div class="form-row">
+                    <div class="col-sm">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="username"
+                            required>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <div class="col-sm">
+                        <input type="password" class="form-control" id="password" name="password" id
+                            placeholder="Password" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                            <label class="form-check-label" for="gridCheck1">
+                                Remember me
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm">
+                        <button id="signin" type="submit" class="btn btn-dark" style="padding: 5px 15px;">Sign
+                            in</button>
+                    </div>
+                </div>
+            </form>
+            <p style="text-align: center; color: #b7b7b7;">Don't have an Virtual Labs Account? <a href='/regis'
+                    style="color: #ffffff; margin-left: 3px;">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/ulg/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+</body>
+
+</html>

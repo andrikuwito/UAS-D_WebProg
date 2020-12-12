@@ -1,0 +1,743 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;0,700;1,500;1,600;1,50%&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fcfcfc;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+/* == LOGIN & SIGNUP INFORMATION == */
+.login-card, .signup-card {
+    width: 40%;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #2d3540;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+.login-card img, .signup-card img {
+    margin-bottom: 30px;
+}
+
+.login-card p, .login-card .form-check, .signup-card .form-check {
+    text-align: left;
+}
+
+.signup-card .form-row {
+    margin-bottom: 20px;
+}
+
+.signup-card .form-check {
+    color: #b5b5b5;
+}
+
+.login-card .btn, .signup-card .btn {
+    background-color: whitesmoke;
+    color: #8f8f8f;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.login-card .btn:active, .signup-card .btn:active {
+    background-color: #c6c6c6;
+    color: #818181;
+}
+
+/* == MAIN NAVIGATION == */
+
+.navbar-override {
+    background-color: rgb(50, 68, 88);
+}
+
+.navbar-override ul:first-of-type {
+    width: 80%;
+    padding-left: 30px;
+    font-family: Raleway, sans-serif;
+}
+
+.navbar-override ul li {
+    margin: 5px;
+    font-size: 110%;
+    letter-spacing: 5px;
+}
+
+.navbar-toggler-override {
+    color: white;
+}
+
+.navbar-nav .dropdown-toggle::after {
+    content: none;
+}
+
+.navbar-nav li {
+    margin-right: 15px;
+}
+
+.navbar-nav .dropdown-item {
+    letter-spacing: 1px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar-brand {
+    margin: 0;
+    margin-left: 20px;
+    font-family: Raleway, sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.nav-2 ion-icon {
+    font-size: 160%;
+    margin-left: 20px;
+
+}
+
+.nav-2 .dropdown-menu {
+    padding: 5px;
+}
+
+form.search {
+    width: 250px;
+}
+
+form.search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.search .searchBtn {
+    float: left;
+    width: 20%;
+    padding: 5px 10px;
+    background: #3b566c;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.search .searchBtn:hover {
+    background: #7096b5;
+    transition: background 0.3s;
+}
+
+form.search .searchBtn ion-icon {
+    margin: 0;
+    padding: 0;
+}
+
+form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.nav-2 > li:first-of-type .dropdown-menu {
+    left: -100%;
+}
+
+.nav-2 > li:last-of-type .dropdown-menu {
+    left: -100%;
+}
+
+/* == MAIN-BANNER == */
+
+#main-banner {
+    margin: 40px 0;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 1px lightgray;
+}
+
+#main-banner .col-img {
+    padding: 0;
+}
+
+#main-banner .col-img img {
+    width: 100%;
+    margin-left: 15px;
+    height: 350px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#main-banner .col-wrt {
+    background: linear-gradient(rgb(60, 65, 126) 45%, #0f5a51);
+    margin-left: -15px;
+    margin-right: 15px;
+    padding: 30px 50px 70px 50px;
+    text-align: justify;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+}
+
+.col-wrt a {
+    color: white;
+}
+
+.col-wrt p {
+    margin: 25px 0 0 0;
+}
+
+.col-wrt .disc-desc {
+    letter-spacing: 2px;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+#main-banner .col-wrt .morebtn {
+    position: absolute;
+    bottom: 20%;
+    color: white;
+}
+
+.morebtn ion-icon {
+    position: absolute;
+    left: 110%;
+    bottom: 10%;
+}
+
+#main-banner .col-wrt .morebtn:hover {
+    color: #bcbcbc;
+    transition: color 0.3s;
+}
+
+#main-banner .carousel-control-prev{
+    
+    position: absolute;
+    top: 85%;    
+    left: 63.5%;
+    height: 30px;
+    
+}
+
+#main-banner .carousel-control-next {
+    right: 10%;
+    position: absolute;
+    height: 30px;
+    top: 85%;
+    
+}
+
+#main-banner .carousel-indicators {
+    margin: auto;
+    
+    left: 85%;
+    top: 85%;
+    
+    
+    
+}
+
+#main-banner .carousel-indicators > li {
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+}
+
+#main-banner .carousel-indicators > .active {
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    transition: width 0.3s, height 0.3s;
+}
+
+main{
+    min-height: 370px;
+}
+/* == SPECIAL OFFERS == */
+.section-title {
+    margin: 50px 0 20px 0;
+    font-size: 24px;
+}
+
+.special-offer .col-lg {
+    margin: 0 10px;
+}
+
+.special-offer img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.special-offer .col-2-item img{
+    height: 133px;
+    object-fit: cover;
+}
+
+.special-offer .col-2-item .game-desc {
+    margin-bottom: 10px;
+}
+
+.game-desc {
+    background-color: rgb(50,60,88);
+    display: block;
+    color: white;
+    padding: 20px;
+    height: 90px;
+}
+
+.special-offer .price .col-3 {
+    margin: -10px 0 0;
+}
+
+.special-offer .price .disc-percentage {
+    background-color: #46b446;
+    font-size: 28px;
+    padding: 0 15px;
+    margin-left: 12px;
+    margin-right: 160px;
+}
+
+.special-offer .price .real-price {
+    background-color: #4d5964;
+    left: -160px;
+}
+
+.special-offer .price .from-price {
+    text-decoration: line-through;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.special-offer .price .to-price {
+    font-size: 16px;
+    padding: 0 10px;
+    color: orange;
+    font-weight: 500;
+}
+
+/* == FREE GAMES BANNER == */
+
+.free-games {    
+    background: linear-gradient(#40406f 55%, #581a1a);
+    margin: 30px auto 100px;
+    border-radius: 10px;
+    color: white;
+}
+
+.title2 {
+    margin-top: 100px;
+}
+
+.free-games .col-lg:first-of-type {
+    padding: 100px;
+}
+
+.free-games h3 {
+    font-size: 36px;    
+}
+
+.free-games p {
+    text-align: justify;
+    margin: 30px 100px 50px 0;
+}
+
+.free-games a {
+    background-color: rgba(116, 116, 216, 0.46);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 10px;
+}
+
+.free-games a:hover {
+    background-color: rgba(155, 148, 183, 0.52);
+    transition: background-color 0.3s;
+}
+
+.free-games img {
+    width: 130%;
+    margin-top: -10%;
+    margin-left: -70px;
+    object-fit: cover;
+}
+
+/* == NEW RELEASE == */
+
+.new-release .new-game {
+    margin: 0 10px;
+}
+
+.new-release .new-game:hover {
+    box-shadow: 0 0 10px 3px #c6c6c6;
+    transition: box-shadow 0.3s;
+}
+
+.new-release img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.new-release .game-desc {
+    display: block;
+    padding: 15px 20px 0 15px;
+    background-color: #d7d6ea;
+    color: black;
+}
+
+.new-release .publisher {
+    font-size: 12px;
+    margin-top: -6px;
+    margin-bottom: 8px;
+}
+
+.new-release .price {
+    position: absolute;
+    font-size: 18px;
+    color: #ff6c00;
+    bottom: 0;
+}
+
+
+/* == GENRE BROWSE == */
+
+.genre-section .row {
+    margin: 0 auto;
+}
+
+.genre-section a {
+    margin:  10px;
+    padding: 22px;
+    width: 200px;
+    border-radius: 5px;
+    color: #7c7c7c;
+}
+
+.genre-section .rpg {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/rpg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.genre-section .action {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/action.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.genre-section .adventure {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/adventure.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.genre-section .casual {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/casual.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.genre-section .fps {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/fps.jpg);
+    background-size: cover;
+    background-position: center ;
+}
+
+.genre-section .horror {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/horror.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.genre-section .simulation {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/simulation.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.genre-section .racing {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/racing.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.genre-section .sports {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/sports.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.genre-section .strategy {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/strategy.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.genre-section .rpg:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.6)), url(../img/rpg.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    transition: background .3s , color 0.3s;
+}
+
+.genre-section .action:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.6)), url(../img/action.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    transition: background .3s , color 0.3s;
+}
+
+.genre-section .adventure:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.6)), url(../img/adventure.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    transition: background .3s , color 0.3s;
+}
+
+.genre-section .casual:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.6)), url(../img/casual.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    transition: background .3s ease, color 0.3s;
+}
+
+.genre-section .fps:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.6)), url(../img/fps.jpg);
+    background-size: cover;
+    background-position: center ;
+    color: white;
+    transition: background .3s ease, color 0.3s;
+}
+
+.genre-section .horror:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.6)), url(../img/horror.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    transition: background .3s ease, color 0.3s;
+}
+
+.genre-section .simulation:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.6)), url(../img/simulation.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    transition: background .3s ease, color 0.3s;
+}
+
+.genre-section .racing:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.6)), url(../img/racing.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    transition: background .3s ease, color 0.3s;
+}
+
+.genre-section .sports:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.6)), url(../img/sports.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    transition: background .3s ease, color 0.3s;
+}
+
+.genre-section .strategy:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.6)), url(../img/strategy.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    transition: background .3s ease, color 0.3s;
+}
+
+.genre-section .row:last-of-type {
+    margin-bottom: 50px;
+}
+
+/* == MORE FROM US == */
+
+.section-title a {
+    color: #8989cc;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.section-title a:hover {
+    text-decoration: underline;
+}
+
+.more-from {
+    margin: 40px 0;
+}
+
+.more-from .more-game {
+    margin: 0 10px;
+}
+
+.more-from .more-game:hover {
+    box-shadow: 0 0 10px 3px #c6c6c6;
+    transition: box-shadow 0.3s;
+}
+
+.more-from img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.more-from .game-desc {
+    display: block;
+    padding: 15px 20px 0 15px;
+    background-color: #d7d6ea;
+    color: black;
+}
+
+.more-from .publisher {
+    font-size: 12px;
+    margin-top: -6px;
+    margin-bottom: 8px;
+}
+
+.more-from .price {
+    position: absolute;
+    font-size: 18px;
+    color: #ff6c00;
+    bottom: 0;
+}
+
+.more-from:last-of-type {
+    margin-bottom: 100px;
+}
+
+/* == FOOTER == */
+.card-footer {
+    background-color: rgb(50, 68, 90);
+    padding: 20px;
+    color: #ffffff;
+}
+
+.card-footer p {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.card-footer ul {
+    list-style: none;
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.card-footer li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.icon li{
+    margin-right: 0;
+}
+
+.icon ion-icon {
+    font-size: 40px;
+    color: #c9c9c9;
+}
+
+#facebook:hover {
+    color: #4267B2;
+    transition: color 0.2s;
+}
+
+#twitter:hover {
+    color: #00acee;
+    transition: color 0.2s;
+}
+
+#pinterest:hover {
+    color: #E60023;
+    transition: color 0.2s;
+}
+
+#youtube:hover {
+    color: #FF0000;
+    transition: color 0.2s;
+}
+
+#instagram:hover {
+    color: #515bd4;
+    transition: color 0.2s;
+}
+
+.card-footer li a {
+    margin-right: 20px;
+    color: #ffffff;
+}
+
+.card-footer li a:hover {
+    color: #7ea5fd;
+    transition: color 0.2s;
+}
+
+.card-footer li span {
+    font-size: 80%;
+    color: #797979;
+}
+
+.copyright {
+    color: white;
+    font-size: 80%;
+}
+
+.footer-desc {
+    color: #d1d1d1;
+    padding: 0 10%;
+    font-size: 90%;
+}
+
+
+/* ------------------------------------ */
+/* ANIMATIONS */
+/* ------------------------------------ */
+
+.js--carousel,
+.js--new-release,
+.js--more-from,
+.js--genre-section,
+.js--special-offer {
+    opacity: 0;
+    animation-duration: 1s;
+}
+
+.js--free-game {
+    animation-duration: 1s;
+}
+
+.js--carousel.animated,
+.js--new-release.animated
+.js--more-from.animated,
+.js--genre-section.animated,
+.js--special-offer.animated {
+    opacity: 1;
+}

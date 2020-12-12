@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;0,700;1,500;1,600;1,50%&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fcfcfc;
+}
+
+a:link {
+    text-decoration: none;
+}
+a{
+    color: black;
+}
+/* == LOGIN & SIGNUP INFORMATION == */
+.login-card, .signup-card {
+    width: 40%;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #2d3540;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+.login-card img, .signup-card img {
+    margin-bottom: 30px;
+}
+
+.login-card p, .login-card .form-check, .signup-card .form-check {
+    text-align: left;
+}
+
+.signup-card .form-row {
+    margin-bottom: 20px;
+}
+
+.signup-card .form-check {
+    color: #b5b5b5;
+}
+
+.login-card .btn, .signup-card .btn {
+    background-color: whitesmoke;
+    color: #909090;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.login-card .btn:active, .signup-card .btn:active {
+    background-color: #c6c6c6;
+    color: #818181;
+}
+
+/* == MAIN NAVIGATION == */
+main{
+    min-height: 370px;
+}
+
+.navbar-override {
+    background-color: rgb(50, 68, 88);
+}
+
+.navbar-override ul:first-of-type {
+    width: 80%;
+    padding-left: 30px;
+    font-family: Raleway, sans-serif;
+}
+
+.navbar-override ul li {
+    margin: 5px;
+    font-size: 110%;
+    letter-spacing: 5px;
+}
+
+.navbar-toggler-override {
+    color: white;
+}
+
+.navbar-nav .dropdown-toggle::after {
+    content: none;
+}
+
+.navbar-nav li {
+    margin-right: 15px;
+}
+
+.navbar-nav .dropdown-item {
+    letter-spacing: 1px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar-brand {
+    margin: 0;
+    margin-left: 20px;
+    font-family: Raleway, sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.nav-2 ion-icon {
+    font-size: 160%;
+    margin-left: 20px;
+
+}
+
+.nav-2 .dropdown-menu {
+    padding: 5px;
+}
+
+form.search {
+    width: 250px;
+}
+
+form.search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.search .searchBtn {
+    float: left;
+    width: 20%;
+    padding: 5px 10px;
+    background: #3b566c;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.search .searchBtn:hover {
+    background: #7096b5;
+    transition: background 0.3s;
+}
+
+form.search .searchBtn ion-icon {
+    margin: 0;
+    padding: 0;
+}
+
+form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.nav-2 > li:first-of-type .dropdown-menu {
+    left: -100%;
+}
+
+.nav-2 > li:last-of-type .dropdown-menu {
+    left: -100%;
+}
+
+
+.container{
+    margin-top: 10px;
+  padding-left: 7%;
+}
+
+input {
+    margin-bottom: 10px;
+    background-color: Transparent;
+    border: none;
+    outline: none;
+    
+}
+
+.lele {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.filter{
+    margin-top: 25px;
+}
+
+.game-desc {
+    display: block;
+    padding: 15px 20px 0 15px;
+    background-color: #e4e4e4;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.publisher {
+    font-size: 12px;
+    margin-top: -6px;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 18px;
+    color: orange;
+    bottom: 0;
+}
+
+.new-game:hover {
+    box-shadow: 0 0 10px 3px #ff0000;
+    transition: box-shadow 0.3s;
+}
+
+.new-game {
+    margin-right: 15px;
+}
+
+.new-game img {
+    width: 220px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.new-game h4 {
+    font-size: 15px;
+}
+
+.disc-percentage {
+    background-color: #46b446;
+    font-size: 25px;
+    padding: 0 10px;
+
+}
+
+.real-price {
+    background-color: #4d5964;
+    left: -160px;
+}
+
+.from-price {
+    text-decoration: line-through;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.to-price {
+    font-size: 14px;
+    padding: 0 10px;
+    color: orange;
+}
+
+.diskon {
+    display: flex;
+    padding-bottom: 4px;
+}
+
+.game-descc {
+    display: block;
+    padding: 1px 20px 0 15px;
+    background-color: #f7f7f7;
+    color: black;
+    margin-bottom: 10px;
+}
+
+
+
+.card-footer {
+    background-color: rgb(50, 68, 90);
+    padding: 20px;
+    color: #ffffff;
+}
+
+.card-footer p {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.card-footer ul {
+    list-style: none;
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.card-footer li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.icon li{
+    margin-right: 0;
+}
+
+.icon ion-icon {
+    font-size: 40px;
+    color: #c9c9c9;
+}
+
+#facebook:hover {
+    color: #4267B2;
+    transition: color 0.2s;
+}
+
+#twitter:hover {
+    color: #00acee;
+    transition: color 0.2s;
+}
+
+#pinterest:hover {
+    color: #E60023;
+    transition: color 0.2s;
+}
+
+#youtube:hover {
+    color: #FF0000;
+    transition: color 0.2s;
+}
+
+#instagram:hover {
+    color: #515bd4;
+    transition: color 0.2s;
+}
+
+.card-footer li a {
+    margin-right: 20px;
+    color: #ffffff;
+}
+
+.card-footer li a:hover {
+    color: #7ea5fd;
+    transition: color 0.2s;
+}
+
+.card-footer li span {
+    font-size: 80%;
+    color: #797979;
+}
+
+.copyright {
+    color: white;
+    font-size: 80%;
+}
+
+.footer-desc {
+    color: #d1d1d1;
+    padding: 0 10%;
+    font-size: 90%;
+}
