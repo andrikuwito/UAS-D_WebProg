@@ -14,6 +14,8 @@ const produkRouter = require('./routes/produk')
 const newsRouter = require('./routes/news')
 const aboutRouter = require('./routes/about')
 const faqRouter = require('./routes/faq')
+const termsRouter = require('./routes/terms')
+const policyRouter = require('./routes/policy')
 const libraryRouter = require('./routes/library')
 
 app.use(flash())
@@ -45,6 +47,8 @@ app.use('/produk', produkRouter)
 app.use('/newsindex', newsRouter)
 app.use('/about', aboutRouter)
 app.use('/faq', faqRouter)
+app.use('/policy', policyRouter)
+app.use('/terms', termsRouter)
 app.use('/library', libraryRouter)
 app.use('/', indexRouter)
 
@@ -60,4 +64,5 @@ app.get('/logout', function (req, res) {
     req.logout();
     res.redirect('/');
 });
-app.listen(3000);
+var port = process.env.PORT || 3000;
+app.listen(port);

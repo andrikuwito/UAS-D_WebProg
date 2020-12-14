@@ -53,8 +53,7 @@
                                     <a href="/produk/<%= produks._id%>">
                                         <p class="disc-desc">AVALAIBLE NOW</p>
                                         <h2><%=produks.title%></h2>
-                                        <p>An online and local party game of teamwork and betrayal for 4-10 players...in
-                                            space!</p>
+                                        <p><%=produks.des%></p>
                                     </a>
                                     <a class="morebtn" href="/produk/<%= produks._id%>">Play Now <ion-icon
                                             name="arrow-redo-circle-outline"></ion-icon></a>
@@ -89,7 +88,7 @@
                             <a href="/produk/<%= produks._id%>"><img src="/img<%=produks.img[0]%>"></a>
                         </div>
                         <div class="row game-desc">
-                            <a href="/produk/<%= produks._id%>">
+                            <a href="/produk/<%= produks._id%>" style="color: white;">
                                 <h5><%=produks.title%></h5>
                             </a>
                         </div>
@@ -160,42 +159,21 @@
                         <% }) %>
                     </div>
                     <div class="row more-from">
+                        <% produks.forEach (produks => { %>
+                            <% if(produks.role=='1'){ %>
                         <div class="col-md more-game">
-                            <a href="disgaea.html">
+                            <a href="/produk/<%= produks._id%>">
                                 <div class="row row-img">
-                                    <img src="/img/apex.jpg">
+                                    <img src="/img<%=produks.img[0]%>">
                                 </div>
                                 <div class="row game-desc">
-                                    <h6>Apex Legends#8482</h6>
-                                    <p class="publisher">Electronic Arts</p>
-                                    <p class="price">FREE</p>
+                                    <h6><%=produks.title%></h6>
+                                    <p class="publisher"><%=produks.publusher%></p>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md more-game">
-                            <a href="disgaea.html">
-                                <div class="row row-img">
-                                    <img src="/img/nfsheat.jpg">
-                                </div>
-                                <div class="row game-desc">
-                                    <h6>Need For Speed&#8482 Heat</h6>
-                                    <p class="publisher">Electronic Arts</p>
-                                    <p class="price">$59.99</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md more-game">
-                            <a href="disgaea.html">
-                                <div class="row row-img">
-                                    <img src="/img/fifa.jpg">
-                                </div>
-                                <div class="row game-desc">
-                                    <h6>FIFA 21</h6>
-                                    <p class="publisher">Electronic Arts</p>
-                                    <p class="price">$79.90</p>
-                                </div>
-                            </a>
-                        </div>
+                        <% } %>
+                        <% }) %>
                     </div>
                 </div>
             </div>
@@ -222,11 +200,9 @@
         </ul>
 
         <ul>
-            <li><a href="contact.html">Customer Care</a><span> &#124;</span></li>
-            <li><a href="contact.html">Contact Us</a><span> &#124;</span></li>
-            <li><a href="terms.html">Terms of Services</a><span> &#124;</span></li>
-            <li><a href="policy.html">Privacy Policy</a><span> &#124;</span></li>
-            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="/terms">Terms of Services</a><span> &#124;</span></li>
+            <li><a href="/policy">Privacy Policy</a><span> &#124;</span></li>
+            <li><a href="/faq">FAQ</a></li>
         </ul>
 
         <p class="copyright">&#169; 2020 Virtual Labs, All Rights Reserved.</p>

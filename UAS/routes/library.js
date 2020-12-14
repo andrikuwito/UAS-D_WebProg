@@ -5,11 +5,6 @@ const router = express.Router()
 const Produk = require("../model/produk")
 const User = require('../model/user')
 const mongoose = require('mongoose')
-mongoose.connect(
-    "mongodb://127.0.0.1:27017/virtual-labs",
-    { useNewUrlParser: true, useUnifiedTopology: true }
-
-);
 
 
 const db = mongoose.connection;

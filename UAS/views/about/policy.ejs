@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/img/logo_transparent.png" />
+    <title>Virtual Labs &mdash; About us</title>
+
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animate.css">
+
+    <style>
+        .title h1,
+        .title p {
+            text-align: center;
+        }
+
+        .title h1 {
+            font-size: 48px;
+            margin: 40px 0 10px;
+            text-decoration: underline;
+        }
+
+        .title p {
+            margin-bottom: 40px;
+        }
+
+        .description {
+            background-color: lightblue;
+            margin: 50px 15px;
+            padding: 100px 60px;
+            text-align: justify;
+        }
+
+        h2 {
+            margin-left: 15px;
+        }
+
+        .profile {
+            background-color: lightgray;
+            margin: 5px 15px 50px;
+            padding: 60px 40px;
+        }
+
+        .profile .col-md {
+            margin: 0 20px;
+        }
+
+        .profile img {
+            height: 350px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .profile h3,
+        .profile p {
+            width: 100%;
+            margin: 3px;
+        }
+
+        .profile ul {
+            list-style: none;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        .profile li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .profile ul ion-icon {
+            color: #5a5a5a;
+        }
+
+        #github:hover {
+            color: black;
+            transition: color 0.2s;
+        }
+
+        /* animation */
+        .description,
+        .profile {
+            opacity: 0;
+            transition-duration: 1s;
+        }
+
+        .description.animated,
+        .profile.animated {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <% if (isLoggedIn) { %>
+    <%- include('../partials/navbar', {isLoggedIn : isLoggedIn, username: username}); %>
+    <% } else { %> <%- include('../partials/navbar', {isLoggedIn : isLoggedIn}); %> <% } %>
+
+    <main>
+        <div class="container-fluid">
+            <div class="container terms">
+                <h1 style="text-align: left">PRIVACY POLICY</h1>
+                
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac orci sed purus tincidunt vestibulum. Quisque efficitur ultricies placerat. Vivamus vitae odio vitae nisi tristique malesuada. Nulla porta aliquet lectus. Nullam ac turpis vitae enim egestas molestie vehicula vitae mauris. Sed rutrum tortor eu risus mattis, sed elementum ante viverra. Vivamus tempor in nunc suscipit lobortis. Morbi quis risus orci. Vivamus cursus odio vel ligula commodo, eu ultrices purus ullamcorper. Nulla a nisi eget metus feugiat ultricies in vel risus. Mauris molestie metus neque, in vestibulum metus rhoncus at.<br><br>
+
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur at varius purus, ut vestibulum eros. Aenean suscipit tellus eu orci facilisis feugiat. Proin congue nibh at lacus placerat ornare. Mauris porta blandit semper. Suspendisse porttitor justo id mauris sodales, vel posuere ligula laoreet. Pellentesque venenatis arcu vitae tincidunt maximus. Nam tristique sem in condimentum ornare. Nam blandit ullamcorper nulla. Cras quis libero eget ante cursus sagittis. Integer consequat pretium lectus vitae varius. Vivamus viverra leo at elementum tincidunt. Fusce suscipit molestie velit. Vestibulum euismod ex id arcu aliquam sagittis.<br><br>
+
+                    Mauris luctus lacus a sem pellentesque maximus. Curabitur ut accumsan sapien. Quisque hendrerit metus in iaculis vulputate. Phasellus in ultricies massa, ut finibus dolor. Ut accumsan felis ipsum, quis condimentum augue faucibus vel. Etiam convallis mauris in placerat accumsan. Donec lorem mauris, luctus in ornare id, scelerisque eget felis. In at dolor enim.<br><br>
+
+                    Curabitur sed aliquet enim. In hac habitasse platea dictumst. Aenean at ultrices risus. Proin nec ipsum nec metus ultrices vulputate ac id nulla. Sed sed gravida metus. Praesent at est iaculis, interdum velit nec, fringilla ex. Proin ornare imperdiet tristique. Proin a nisi vel risus ullamcorper consequat finibus vitae tortor. Phasellus posuere felis sit amet odio cursus, ut imperdiet nibh suscipit. Ut sollicitudin ipsum diam, hendrerit rhoncus dolor iaculis et. Pellentesque vel arcu auctor, scelerisque dui sed, tristique ipsum. Curabitur quis tortor vehicula, ultricies mauris id, pulvinar augue. Praesent nec mauris ex.<br><br>
+
+                    Praesent commodo tortor vitae metus facilisis, sit amet vulputate augue mollis. Cras nunc ligula, porttitor id metus id, hendrerit hendrerit purus. Nullam ornare congue cursus. Mauris aliquam mi eu arcu porta blandit. Sed a felis risus. Morbi erat arcu, faucibus mattis aliquet eu, ultrices non urna. Proin convallis imperdiet interdum. In imperdiet scelerisque ligula, et facilisis dui consequat lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><br>
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur at varius purus, ut vestibulum eros. Aenean suscipit tellus eu orci facilisis feugiat. Proin congue nibh at lacus placerat ornare. Mauris porta blandit semper. Suspendisse porttitor justo id mauris sodales, vel posuere ligula laoreet. Pellentesque venenatis arcu vitae tincidunt maximus. Nam tristique sem in condimentum ornare. Nam blandit ullamcorper nulla. Cras quis libero eget ante cursus sagittis. Integer consequat pretium lectus vitae varius. Vivamus viverra leo at elementum tincidunt. Fusce suscipit molestie velit. Vestibulum euismod ex id arcu aliquam sagittis.<br><br>
+
+                    Mauris luctus lacus a sem pellentesque maximus. Curabitur ut accumsan sapien. Quisque hendrerit metus in iaculis vulputate. Phasellus in ultricies massa, ut finibus dolor. Ut accumsan felis ipsum, quis condimentum augue faucibus vel. Etiam convallis mauris in placerat accumsan. Donec lorem mauris, luctus in ornare id, scelerisque eget felis. In at dolor enim.<br><br>
+
+                    Curabitur sed aliquet enim. In hac habitasse platea dictumst. Aenean at ultrices risus. Proin nec ipsum nec metus ultrices vulputate ac id nulla. Sed sed gravida metus. Praesent at est iaculis, interdum velit nec, fringilla ex. Proin ornare imperdiet tristique. Proin a nisi vel risus ullamcorper consequat finibus vitae tortor. Phasellus posuere felis sit amet odio cursus, ut imperdiet nibh suscipit. Ut sollicitudin ipsum diam, hendrerit rhoncus dolor iaculis et. Pellentesque vel arcu auctor, scelerisque dui sed, tristique ipsum. Curabitur quis tortor vehicula, ultricies mauris id, pulvinar augue. Praesent nec mauris ex.<br><br>
+
+                    Praesent commodo tortor vitae metus facilisis, sit amet vulputate augue mollis. Cras nunc ligula, porttitor id metus id, hendrerit hendrerit purus. Nullam ornare congue cursus. Mauris aliquam mi eu arcu porta blandit. Sed a felis risus. Morbi erat arcu, faucibus mattis aliquet eu, ultrices non urna. Proin convallis imperdiet interdum. In imperdiet scelerisque ligula, et facilisis dui consequat lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="card-footer text-center">
+        <ul class="icon">
+            <li><a href="https://www.facebook.com/" target="_blank">
+                    <ion-icon id="facebook" name="logo-facebook"></ion-icon>
+                </a></li>
+            <li><a href="https://twitter.com/" target="_blank">
+                    <ion-icon id="twitter" name="logo-twitter"></ion-icon>
+                </a></li>
+            <li><a href="https://id.pinterest.com/" target="_blank">
+                    <ion-icon id="pinterest" name="logo-pinterest"></ion-icon>
+                </a></li>
+            <li><a href="https://www.youtube.com/" target="_blank">
+                    <ion-icon id="youtube" name="logo-youtube"></ion-icon>
+                </a></li>
+            <li><a href="https://www.instagram.com/" target="_blank">
+                    <ion-icon id="instagram" name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+
+        <ul>
+            <li><a href="/terms">Terms of Services</a><span> &#124;</span></li>
+            <li><a href="/policy">Privacy Policy</a><span> &#124;</span></li>
+            <li><a href="/faq">FAQ</a></li>
+        </ul>
+
+        <p class="copyright">&#169; 2020 Virtual Labs, All Rights Reserved.</p>
+        <p class="footer-desc">Use of and/or registration on any portion of this site constitutes acceptance of our User
+            Agreement (updated 1/1/20) and Privacy Policy and Cookie Statement (updated 1/1/20). Your California Privacy
+            Rights. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used,
+            except with the prior written permission of Condé Nast. Ad Choices.</p>
+    </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/ulg/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="/js/jquery.waypoints.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
