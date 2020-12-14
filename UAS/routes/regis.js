@@ -13,10 +13,8 @@ router.post('/',(req,res)=>{
 })
 
 async function newuser  (req,res){
-    const User =await  user.findOne({username:req.user.username})
-    if(User.username==user){
-        
-    }
+
+
     var new_user = new user();
     const hashed_pass = await bcrypt.hash(req.body.password,10)
     new_user.fname=req.body.fname
