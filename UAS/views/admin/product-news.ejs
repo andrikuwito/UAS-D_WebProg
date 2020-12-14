@@ -1,0 +1,99 @@
+<%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/products.css">
+    </head>
+    <body>
+        <%- include('../partials/dashboard-menu.ejs') %>
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center"><% message %></h1>
+            </div>
+        </div>
+    </div>    
+
+    <form class="form-horizontal" action="/admin/products/create" method="POST" id="productNewForm" data-toggle="validator" autocomplete="off">
+        <div class="col-12">
+            <div class="page-header">
+                <div class="float-right">
+                    <button id="frm_edit_product_save" class="btn btn-outline-success" type="submit">Add product</button>
+                </div>
+                <h2>New Product</h2>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+                <label for="title" class="control-label">Title *</label>
+                <input type="text" name="title" id="title" class="form-control" placeholder="Game Title" minlength="5" maxlength="200" value="<% title %>" required/>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="form-group">
+                <label for="publisher" class="control-label">Publisher *</label>
+                <input type="text" name="publisher" id="publisher" class="form-control" placeholder="Game Publisher" minlength="5" maxlength="200" value="<% publisher %>" required/>
+            </div>
+        </div>
+
+        <div class="row ml-0 mr-0">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="platform" class="control-label">Status</label>
+                    <select class="form-control" name="platform" id="platform">
+                        <option selected>PC</option>
+                        <option>Mobile</option>
+                    </select>
+                </div>
+            </div>
+        </div>    
+        <div class="col-12">
+            <div class="form-group" id="editor-wrapper">
+                <label for="editor" class="control-label">Product description *</label>
+                <textarea minlength="5" rows="10" name="description" id="description" class="form-control" required></textarea>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+                <label for="release" class="control-label">Release Date</label>
+                <input type="text" name="release" class="form-control" id="release">
+                <p class="help-block">Genre words used to indexed products, making them easier to find and filter.</p>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+                <label for="productTags" class="control-label">Product tag words</label>
+                <input type="text" name="productTags" class="form-control" id="productTags">
+                <p class="help-block">Tag words used to indexed products, making them easier to find and filter.</p>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+                <label for="developer" class="control-label">Developer</label>
+                <input type="text" name="developer" class="form-control" id="developer">
+            </div>
+        </div>
+
+        <div class="input-group col-6">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+            </div>
+            <div class="custom-file">
+              <input type="file" name="productImage" class="custom-file-input" id="inputGroupFile01"
+                aria-describedby="inputGroupFileAddon01">
+              <label class="custom-file-label" for="inputGroupFile01">Choose Image</label>
+            </div>
+          </div>
+    </form>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
+<script>
+    $(document).ready(function() {
+        $('#productDescription').summernote({
+            height: 300,
+            minHeight: null
+        });
+    });
+</script>

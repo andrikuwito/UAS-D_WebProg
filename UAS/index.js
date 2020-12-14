@@ -17,6 +17,8 @@ const faqRouter = require('./routes/faq')
 const termsRouter = require('./routes/terms')
 const policyRouter = require('./routes/policy')
 const libraryRouter = require('./routes/library')
+const admin = require('./routes/admin');
+const adminProduct = require('./routes/adminProducts');
 
 app.use(flash())
 require('./config/passport')(passport);
@@ -33,7 +35,7 @@ app.use(bodyparse.json())
 const mongoose = require('mongoose')
 mongoose.connect(
     "mongodb+srv://andriadmin:admin@virtual-labs.c359t.mongodb.net/virtual-labs?retryWrites=true&w=majority",
-    { useNewUrlParser: true, useUnifiedTopology: true }
+    { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify:true }
 
 );
 const db = mongoose.connection;
@@ -50,6 +52,8 @@ app.use('/faq', faqRouter)
 app.use('/policy', policyRouter)
 app.use('/terms', termsRouter)
 app.use('/library', libraryRouter)
+app.use('/admin', admin);
+app.use('/admin/products', adminProduct);
 app.use('/', indexRouter)
 
 
